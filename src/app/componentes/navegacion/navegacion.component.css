@@ -1,0 +1,84 @@
+.lateral-izq{
+  position: fixed;
+  z-index: 90;
+  width: 80px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: 5px 0px 20px rgba(0,0,0,.03);
+  text-align: center;
+}
+.logo{
+  position: relative;
+  margin-top: 50px;
+}
+.logo .iconos{
+  color: #8FECC8;
+}
+.opciones{
+  height: auto;
+  margin-top: 50px;
+}
+.opciones li{
+  margin-bottom: 50px;
+}
+.opciones li:hover .iconos{
+  transition: all .2s;
+}
+.opciones li:hover .iconos{
+  color: #8FECC8;
+}
+.btn-menu{
+  position: fixed;
+  z-index: 95;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  top: 40px;
+  right: 40px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.05);
+  cursor: pointer;
+  transition: all .3s;
+}
+.btn-menu:hover{
+  box-shadow: 0px 5px 20px rgba(0,0,0,.1);
+}
+.btn-menu i{
+  position: absolute;
+  font-size: 1.4em;
+  top: 18px;
+  left: 21px;
+}
+.lateral-der{
+  position: fixed;
+  z-index: 90;
+  width: 250px;
+  height: 100vh;
+  top: 0;
+  right: -300px;
+  background-color: white;
+  box-shadow: -5px 0px 20px rgba(0,0,0,.03);
+  transition: all .3s;
+}
+.opciones-usuario{
+  font-size: 1.3em;
+  margin-top: 185px;
+  text-align: right;
+  color: #ECECEC;
+}
+.opciones-usuario li{
+  position: relative;
+  margin-bottom: 70px;
+  padding-right: 80px;
+  transition: all .3s;
+}
+.opciones-usuario li:hover .iconos, .opciones-usuario li:hover{
+  color: #8FECC8;
+}
+.opciones-usuario i{
+  position: absolute;
+  top: -12px;
+  right: 40px;
+}

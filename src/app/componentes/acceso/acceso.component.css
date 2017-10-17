@@ -1,0 +1,61 @@
+.section{
+
+}
+h1, h2, h3{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+h1{
+  top: -150px;
+  font-size: 16em;
+  color: #fcfcfc;
+}
+h2{
+  top: 60px;
+  font-size: 6em;
+  font-weight: lighter;
+}
+h3{
+  top: 170px;
+  font-size: 1.6em;
+  font-weight: lighter;
+}
+.formularios{
+  width: 100%;
+  margin-top: 250px;
+  overflow: hidden;
+}
+.formularios > div{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  transition: all .3s;
+}
+.formularios input{
+  display: block;
+}
+.login{
+  left: 11%;
+}
+.login, .registro{
+  padding-left: calc(50% - 325px);
+}
+.login a{
+  position: absolute;
+  width: 200px;
+  bottom: 150px;
+  right: 200px;
+  cursor: pointer;
+}
+.registro a{
+  position: absolute;
+  width: 300px;
+  bottom: 200px;
+  left: -50px;
+  cursor: pointer;
+}
+.registro{
+  left: 100%;
+  top: 280px;
+}

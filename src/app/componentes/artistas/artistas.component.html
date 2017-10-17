@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="container">
+    <div *ngFor="let artista of artistas">
+      <div class="box-artist">
+        <div class="box-artist__header">
+          <div class="box-artist__header--imagen">
+            <img src="{{url + 'obtener-imagen-artista/' + artista.imagen}}" alt="">
+          </div>
+          <div class="box-artist__header--bio">
+            <h4 class="texto uppercase">{{artista.nombre}}</h4>
+          </div>
+        </div>
+        <div class="box-artist__footer">
+          <div class="box-artist__footer--redes">
+            <nav>
+              <ul>
+                <a><li><i class="ion-social-twitter iconos"></i></li></a>
+                <a><li><i class="ion-social-facebook iconos"></i></li></a>
+                <a><li><i class="ion-social-instagram iconos"></i></li></a>
+              </ul>
+            </nav>
+          </div>
+          <div class="box-artist__footer--play">
+            <nav>
+              <ul>
+                <a><li><i class="ion-filing iconos"></i></li></a>
+                <a><li><i class="ion-music-note iconos"></i></li></a>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

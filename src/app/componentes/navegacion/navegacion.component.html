@@ -1,0 +1,27 @@
+<div class="lateral-izq">
+  <div class="logo">
+    <a [routerLink]="['/home']"><i class="ion-disc iconos"></i></a>
+  </div>
+  <nav class="opciones">
+    <ul>
+      <a [routerLink]="['/home']"><li><i class="ion-home iconos"></i></li></a>
+      <a [routerLink]="['/artists']"><li><i class="ion-person-stalker iconos"></i></li></a>
+      <a [routerLink]="['/albums']"><li><i class="ion-filing iconos"></i></li></a>
+      <a><li><i class="ion-music-note iconos"></i></li></a>
+      <a><li><i class="ion-search iconos"></i></li></a>
+    </ul>
+  </nav>
+</div>
+<div (click)="mostrarMenu()" class="btn-menu">
+  <i class="ion-navicon-round iconos"></i>
+</div>
+<div class="lateral-der">
+  <nav class="opciones-usuario">
+    <ul>
+      <li class="uppercase texto">perfil <i class="ion-person iconos"></i></li>
+      <li class="uppercase texto">configurar <i class="ion-gear-b iconos"></i></li>
+      <li class="uppercase texto">seguidos <i class="ion-person-stalker iconos"></i></li>
+      <li class="uppercase texto">cerrar sesión <i class="ion-power iconos"></i></li>
+    </ul>
+  </nav>
+</div>

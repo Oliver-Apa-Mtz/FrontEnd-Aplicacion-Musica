@@ -1,0 +1,57 @@
+<div class="section">
+  <h1 class="titulos uppercase">musica</h1>
+  <h2 class="texto uppercase">musica</h2>
+  <h3 class="texto uppercase">escucha la musica de tus artistas urbanos favoritos en linea</h3>
+  <div class="formularios">
+    <div class="login">
+      <form #formLogin="ngForm" (ngSubmit)="iniciarSesion()">
+        <div class="input-container">
+          <input [(ngModel)]="usuario.email" #emailL="ngModel" name="emailL" class="texto" type="email" placeholder="EMAIL:" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+          <i *ngIf="emailL.touched && !emailL.valid" class="ion-close iconos icon-error"></i>
+          <i *ngIf="emailL.touched && emailL.valid" class="ion-checkmark iconos icon-bien"></i>
+        </div>
+        <div class="input-container">
+          <input [(ngModel)]="usuario.password" #passwordL="ngModel" name="passwordL" class="texto" type="password" placeholder="CONTRASEÑA:" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <i *ngIf="passwordL.touched && !passwordL.valid" class="ion-close iconos icon-error"></i>
+          <i *ngIf="passwordL.touched && passwordL.valid" class="ion-checkmark iconos icon-bien"></i>
+        </div>
+        <div class="input-container">
+          <input [disabled]="!formLogin.form.valid" (click)="iniciarSesion()" class="texto uppercase" type="button" value="Entrar">
+        </div>
+      </form>
+      <a (click)="cambiarFormularios()"><h3 class="texto uppercase">registrate <i class="ion-ios-arrow-thin-right"></i></h3></a>
+    </div>
+    <div class="registro">
+      <form #formRegistro="ngForm" (ngSubmit)="guardarUsuario()">
+        <div class="input-container">
+          <input [(ngModel)]="usuarioGuardar.nombre" #nombre="ngModel" name="nombre" class="texto" type="text" placeholder="NOMBRE:" required>
+          <i *ngIf="nombre.touched && !nombre.valid" class="ion-close iconos icon-error"></i>
+          <i *ngIf="nombre.touched && nombre.valid" class="ion-checkmark iconos icon-bien"></i>
+        </div>
+        <div class="input-container">
+          <input [(ngModel)]="usuarioGuardar.email" #email="ngModel" name="email" class="texto" type="email" placeholder="EMAIL:" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+          <i *ngIf="email.touched && !email.valid" class="ion-close iconos icon-error"></i>
+          <i *ngIf="email.touched && email.valid" class="ion-checkmark iconos icon-bien"></i>
+        </div>
+        <div class="input-container">
+          <input [(ngModel)]="usuarioGuardar.password" #password="ngModel" name="password" class="texto" type="password" placeholder="CONTRASEÑA:" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+          <i *ngIf="password.touched && !password.valid" class="ion-close iconos icon-error"></i>
+          <i *ngIf="password.touched && password.valid" class="ion-checkmark iconos icon-bien"></i>
+        </div>
+        <div class="input-container">
+          <input [disabled]="!formRegistro.form.valid" (click)="guardarUsuario()" class="texto uppercase" type="button" value="registrarse">
+        </div>
+      </form>
+      <a (click)="cambiarFormularios()"><h3 class="texto uppercase"><i class="ion-ios-arrow-thin-left"></i> inicia sesión</h3></a>
+    </div>
+  </div>
+  <div *ngIf="mensajeRegistro">
+    <div class="alerts">
+      <div class="alerts__main">
+        <i class="{{mensajeRegistro[0]}} iconos"></i>
+        <h4>{{mensajeRegistro[1]}}</h4>
+        <h6>{{mensajeRegistro[2]}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

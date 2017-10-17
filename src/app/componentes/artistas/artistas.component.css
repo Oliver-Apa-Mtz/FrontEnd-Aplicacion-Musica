@@ -1,0 +1,39 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container > div{
+  flex-grow: 1;
+}
+.box-artist__header--imagen{
+  width: 40%;
+}
+.box-artist__header--imagen img{
+  width: 100px;
+  height: 100px;
+  margin-top: calc(50% - 50px);
+  margin-left: auto;
+  border-radius: 50%;
+}
+.box-artist__header--bio{
+  width: 60%;
+  padding-top: 20px;
+  font-size: 1.5em;
+  text-align: left;
+}
+.box-artist__footer--redes{
+  width: 60%;
+}
+.box-artist__footer--play{
+  width: 40%;
+}
+li{
+  display: inline;
+  margin: 0 10px;
+}
+.box-artist__footer i{
+  transition: all .2s;
+}
+.box-artist__footer i:hover{
+  color: #8FECC8;
+}

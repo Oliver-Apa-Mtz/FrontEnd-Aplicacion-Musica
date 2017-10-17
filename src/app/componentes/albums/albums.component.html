@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <div *ngFor="let album of albums">
+      <div class="box-album-container">
+        <div class="box-album-container__main">
+          <div class="box-album-container__main--image">
+            <img src="{{url + 'obtener-imagen-album/' + album.imagen}}" alt="">
+          </div>
+          <div class="box-album-container__main--details">
+            <h3 class="texto uppercase">{{album.titulo}}</h3>
+            <h3 class="texto uppercase">{{album.fechaPublicado}}</h3>
+            <h4 class="texto">{{album.descripcion}}</h4>
+            <i><img src="{{url+ 'obtener-imagen-artista/' + album.artista.imagen}}" alt=""></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
